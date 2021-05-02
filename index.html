@@ -3,18 +3,50 @@ permalink: /
 ---
 
 <!doctype html>
-<html>
-  <head>
-    <title>Hiiii</title>
-  </head>
-  <body>
-    <center>
-      <h1>Hiiiii!</h1>
-      <p>i have a kitty &#128049;</p>
-      <p>i have a doggy &#128054;</p>
-      <p>i have a parrot &#129436;</p>
-      <br>
-      <p>look at my <a href="https://github.com/wackyblackie">GitHub</a>.</p>
-    </center>
-  </body>
+<html lang="en">
+    <head>
+        <script>document.title = location.href.split("://")[1].split("/")[0];</script>
+		<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/54408289">
+    </head>
+    <body>
+    	<center>
+			<h1><u>My Repositories with GitHub Pages</u></h1>
+      		<script>
+			var repos = ['users/wackyblackie', 'orgs/aguaproject', 'orgs/ModernHTMLdesign'];
+			var site = ['wackyblackie', 'aguaproject', 'modernhtmldesign'];
+			for (var a = 0; a<repos.length; a++) {
+				const currsite = site[a];
+				const xhr = new XMLHttpRequest();
+				const url = `https://api.github.com/${repos[a]}/repos`;
+				xhr.open('GET', url, true);
+				xhr.onload = function() {
+					const data = JSON.parse(this.response);
+					console.info(data);
+					for (let i in data) {
+						if (data[i].has_pages == true) {
+							if (data[i].description != null) {
+								var din = data[i].name;
+								document.body.innerHTML +=
+									'<center><h2 id="'+din.replace(/\./g, '-')+'"><b>'+
+									data[i].name+"</b></h2>"+
+									"<b>Description:</b> "+data[i].description+".<br>\n"+
+									'<b>Homepage:</b> <a href="https://'+currsite+'.github.io/'+data[i].name+'">https://'+currsite+'.github.io/'+data[i].name+"</a><br>\n"+
+									'<b>GitHub URL:</b> <a href="'+data[i].svn_url+'">'+data[i].svn_url+'</a><hr><br></center>\n';
+							} else {
+								var din = data[i].name;
+								document.body.innerHTML +=
+									'<center><h2 id="'+din.replace(/\./g, '-')+'"><b>'+
+									data[i].name+"</b></h2>"+
+									"<b>Description:</b> <i>No description provided.</i><br>\n"+
+									'<b>Homepage:</b> <a href="https://'+currsite+'.github.io/'+data[i].name+'">https://'+currsite+'.github.io/'+data[i].name+"</a><br>\n"+
+									'<b>GitHub URL:</b> <a href="'+data[i].svn_url+'">'+data[i].svn_url+'</a><hr><br></center>\n';
+							}
+						}
+					}
+				}
+				xhr.send();
+			}
+      		</script>
+    	</center>
+  	</body>
 </html>
