@@ -1,26 +1,29 @@
----
-permalink: /
----
-
 <!doctype html>
 <html lang="en">
     <head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=8">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta 
+		 http-equiv="Content-Security-Policy" content="default-src 'self' https://api.github.com;
+		 script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com/ https://api.github.com/; 
+		 style-src 'self' 'unsafe-inline'; img-src 'self' data: https://avatars.githubusercontent.com; 
+		 font-src *; upgrade-insecure-requests; block-all-mixed-content"
+		>
 
 		<title>wackyblackie.gq</title>
 		<link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/54408289">
-		<meta name="description" content="A collection of my GitHub repositories with GitHub Pages.">
-		<meta name="keywords" content="wackyblackie, wackyblackie.gq, wackyblackie.github.io, Alan Burr,
-		 bpotd, RoyalityFree, Free web Hosting, Hosting, Web Hosting, wkbl.cf, wkbl">
+		<meta name="description" content="A collection of my GitHub Pages repos. But, that's useless!
+		 I am a person that lives on earth. I sleep, eat and develop www.wackyblackie.gq and others.">
+		<meta name="keywords" content="wackyblackie, wackyblackie.gq, wackyblackie.github.io, bpotd, 
+		RoyalityFree, Free web Hosting, wkbl.cf, wkbl">
 
 		<!-- Facebook Meta Tags -->
 		<meta property="og:url" content="https://www.wackyblackie.gq/">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="wackyblackie.gq">
-		<meta property="og:description" content="A collection of my GitHub repositories with GitHub Pages.">
+		<meta property="og:description" content="A collection of my GitHub Pages repos. But, that's useless!
+		 I am a person that lives on earth. I sleep, eat and develop www.wackyblackie.gq and others.">
 		<meta property="og:image" content="https://cdn.jsdelivr.net/gh/wackyblackie/wkbl-landing/cat.jpg">
 
 		<!-- Twitter Meta Tags -->
@@ -28,29 +31,61 @@ permalink: /
 		<meta property="twitter:domain" content="wackyblackie.gq">
 		<meta property="twitter:url" content="https://www.wackyblackie.gq/">
 		<meta name="twitter:title" content="wackyblackie.gq">
-		<meta name="twitter:description" content="A collection of my GitHub repositories with GitHub Pages.">
+		<meta name="twitter:description" content="A collection of my GitHub Pages repos. But, that's useless!
+		 I am a person that lives on earth. I sleep, eat and develop www.wackyblackie.gq and others.">
 		<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/wackyblackie/wkbl-landing/cat.jpg">
+
+		<script type='application/ld+json'>
+			{
+			  "@context": "http://www.schema.org",
+			  "@type": "LocalBusiness",
+			  "name": "wackyblackie",
+			  "url": "https://www.wackyblackie.gq/",
+			  "sameAs": [
+				 "https://www.wackyblackie.gq/"
+			  ],
+			  "logo": "https://cdn.statically.io/img/wackyblackie.ml/favicon.ico",
+			  "image": "https://cdn.jsdelivr.net/gh/wackyblackie/wkbl-landing/cat.jpg",
+			  "description": "A collection of my GitHub repositories with GitHub Pages.",
+			  "address": {
+				 "@type": "PostalAddress",
+				 "addressRegion": "Virginia"
+			  }
+			}
+		</script>
+
+		<link rel="canonical" href="https://www.wackyblackie.gq/">
+		<link rel="shortlink" href="https://www.wackyblackie.gq/">
 		
 		<meta name="wot-verification" content="76cb43d56d0c43b8e236"/>
     </head>
     <body>
     	<center>
 			<h1><u>My Repositories with GitHub Pages</u></h1><hr>
-			<center>
-				<a href="https://foreverfree.ga" style="text-decoration: none;">
+			<center id="advert">
+				<a href="https://foreverfree.ga?utm_source=banner.wackyblackie.gq" style="text-decoration: none;">
 					<h2 id="royalityfree" style="text-decoration: none; color: black;"><b>RoyalityFree Web Hosting</b></h2>
-					<b>About:</b> <a href="https://foreverfree.ga?utm_source=wackyblackie.gq">
+					<p>
+						<b style="color: black; text-decoration: none; pointer-events: none;">About:</b>
 						Free Hosting with Unlimited Disk Space, <br>
 						Unlimited Bandwidth, and Unlimited Websites <br>
 						from RoyalityFree. With PHP and MySQL and <br>
 						no forced ads on your site.
+					</p>
+					<a href="https://foreverfree.ga/?utm_source=btn.wackyblackie.gq">
+						<button>
+							Click Here to visit RoyalityFree.com
+						</button>
 					</a>
+					<button onclick="document.getElementById('advert').style.display = 'none';">
+						Close this Advertisment
+					</button>
 				</a>
 				<hr><br>
 			</center>
-      		<script>
-			var repos = ['users/wackyblackie', 'orgs/aguaproject', 'orgs/ModernHTMLdesign'];
-			var site = ['wackyblackie', 'aguaproject', 'modernhtmldesign'];
+      		<script type="text/javascript">
+			var repos = ['users/wackyblackie', 'orgs/aguaproject'];
+			var site = ['wackyblackie', 'aguaproject'];
 			for (var a = 0; a<repos.length; a++) {
 				const currsite = site[a];
 				const xhr = new XMLHttpRequest();
