@@ -58,11 +58,29 @@
 		<link rel="shortlink" href="https://www.wackyblackie.gq/">
 		
 		<meta name="wot-verification" content="76cb43d56d0c43b8e236"/>
+		<style>
+			@media screen and (max-width: 600px) {
+				* :not(h1), :not(br), :not(h2) {
+					margin-top: 0.5rem;
+					margin-bottom: 0.5rem;
+				} h1, h2, p br, a br, hr {
+					margin-top: 0rem;
+					margin-bottom: 0rem;
+				} br {
+					margin-top: 0.25rem;
+				}
+			} .center {
+				position: relative;
+				margin-right: auto;
+				margin-left: auto;
+				text-align: center;
+			}
+		</style>
     </head>
     <body>
-    	<center>
+    	<div class="center">
 			<h1><u>My Repositories with GitHub Pages</u></h1><hr>
-			<center id="advert">
+			<div class="center" id="advert">
 				<a href="https://foreverfree.ga?utm_source=banner.wackyblackie.gq" style="text-decoration: none;">
 					<h2 id="royalityfree" style="text-decoration: none; color: black;"><b>RoyalityFree Web Hosting</b></h2>
 					<p>
@@ -82,7 +100,7 @@
 					</button>
 				</a>
 				<hr><br>
-			</center>
+			</div>
       		<script type="text/javascript">
 			var repos = ['users/wackyblackie', 'orgs/aguaproject'];
 			var site = ['wackyblackie', 'aguaproject'];
@@ -99,19 +117,19 @@
 							if (data[i].description != null) {
 								var din = data[i].name;
 								document.body.innerHTML +=
-									'<center><h2 id="'+din.replace(/\./g, '-')+'"><b>'+
+									'<div class="center"><h2 id="'+din.replace(/\./g, '-')+'"><b>'+
 									data[i].name+"</b></h2>"+
 									"<b>Description:</b> "+data[i].description+".<br>\n"+
 									'<b>Homepage:</b> <a href="https://'+currsite+'.gq/'+data[i].name+'">https://'+currsite+'.gq/'+data[i].name+"</a><br>\n"+
-									'<b>GitHub URL:</b> <a href="'+data[i].svn_url+'">'+data[i].svn_url+'</a><hr><br></center>\n';
+									'<b>GitHub URL:</b> <a href="'+data[i].svn_url+'">'+data[i].svn_url+'</a><hr><br></div>\n';
 							} else {
 								var din = data[i].name;
 								document.body.innerHTML +=
-									'<center><h2 id="'+din.replace(/\./g, '-')+'"><b>'+
+									'<div class="center"><h2 id="'+din.replace(/\./g, '-')+'"><b>'+
 									data[i].name+"</b></h2>"+
 									"<b>Description:</b> <i>No description provided.</i><br>\n"+
 									'<b>Homepage:</b> <a href="https://'+currsite+'.gq/'+data[i].name+'">https://'+currsite+'.gq/'+data[i].name+"</a><br>\n"+
-									'<b>GitHub URL:</b> <a href="'+data[i].svn_url+'">'+data[i].svn_url+'</a><hr><br></center>\n';
+									'<b>GitHub URL:</b> <a href="'+data[i].svn_url+'">'+data[i].svn_url+'</a><hr><br></div>\n';
 							}
 						}
 					}
@@ -119,6 +137,6 @@
 				xhr.send();
 			}
       		</script>
-    	</center>
+    	</div>
   	</body>
 </html>
