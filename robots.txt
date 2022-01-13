@@ -2,3 +2,11 @@ User-agent: *
 Allow: /
 Disallow: /blog/
 Disallow: /Algebra1.html
+Disallow: /Math.html
+Disallow: /Algebra 1 - Chapters 1 thru 3, Student Edition by McGraw-Hill.pdf
+Disallow: /Algebra 1 - Chapters 4 thru 5, Student Edition by McGraw-Hill.pdf
+Disallow: /Algebra 1 - Chapters 6 thru 8, Student Edition by McGraw-Hill.pdf
+Disallow: /Algebra 1 - Chapters 9 thru 11, Student Edition by McGraw-Hill.pdf
+Disallow: /Algebra 1 - Chapters 12 thru 14, Student Edition by McGraw-Hill.pdf
+Disallow: /Algebra 1 - Selected Answers, Formulas, Extra Practice, etc.; Student Edition by McGraw-Hill.pdf
+
