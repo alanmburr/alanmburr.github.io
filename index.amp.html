@@ -1,0 +1,110 @@
+<!doctype html>
+<!-- This tells everyone that this is an AMP file. `<html amp>` works too -->
+<html amp lang="en">  <!--Ref: https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/ -->
+<!-- The charset definition must be the first child of the `<head>` tag -->
+  <head>
+    <meta charset="utf-8">
+    <!-- The AMP runtime must be loaded as the second child of the `<head>` tag.-->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+    <!--AMP HTML files require a canonical link pointing to the regular HTML. If no HTML version exists, it should point to itself -->
+    <link rel="canonical" href="index.amp.html">
+    <title>wackyblackie.gq</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="amp-script-src" content="sha384-_wTAkHVB0wjNJe02LvTdMYR9xGxj-jPzHdl3ogwO6c_mNp6KVlTw_0r8sDl0mLyd">
+    <!--CSS must be embedded inline-->
+    <style amp-custom>
+    html > body {
+		overflow-y: scroll;
+	} a > button, a {cursor: alias;}
+	button {cursor: pointer;}
+	html {scrollbar-color: #959595 rgba(0,0,0,0.1);}
+	h2 {font-size: 1.8rem;}
+	@media screen and (max-width: 600px) {
+		* :not(h1), :not(br), :not(h2) {
+			margin-top: 0.5rem;
+			margin-bottom: 0.5rem;
+		} h1, h2, p br, a br, hr {
+			margin-top: 0rem;
+			margin-bottom: 0rem;
+		} br {
+			margin-top: 0.25rem;
+	    }
+	} .center {
+	   	position: relative;
+		margin-right: auto;
+		margin-left: auto;
+		text-align: center;
+	}
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #343434;
+            color: #dedede;
+        }
+        p, *, :not(a), a > *, b, em {
+            color: #dedede;
+
+        }
+        a {
+            color: #74acf4;
+        }
+        hr, vr {
+            color: #dddddd;
+            background-color: #dddddd;
+        }
+        button {
+            background-color: #454545;
+        }
+    }
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <amp-script layout="fill" script="user-agent-script" class="sample">
+        <div>
+          <span id="output" class="answer-text"></span>
+        </div>
+    </amp-script>
+      
+    <script id="user-agent-script" type="text/plain" target="amp-script">
+        var repos = ['users/wackyblackie', 'orgs/aguaproject'];
+        var site = ['wackyblackie', 'aguaproject'];
+        const span = document.getElementById('output');
+        for (var a = 0; a < repos.length; a++) {
+            const currsite = site[a];
+            const xhr = new XMLHttpRequest();
+            const url = `https://api.github.com/${repos[a]}/repos`;
+            xhr.open('GET', url, true);
+            xhr.onload = function() {
+                const data = JSON.parse(this.response);
+                console.info(data);
+                for (let i in data) {
+                    if (data[i].has_pages == true) {
+                        var din = null;
+                        var db = '';
+                        if (data[i].description != null) {
+                            din = data[i].name;
+                            span.innerHTML +=
+                                '<div class="center"><h2 id="' + din.replace(/\./g, '-') + '"><b>' +
+                                data[i].name + "</b></h2>" +
+                                "<b>Description:</b> " + data[i].description + ".<br>\n" +
+                                '<b>Homepage:</b> <a href="https://' + currsite + '.gq/' + data[i].name + '">https://' + currsite + '.gq/' + data[i].name + "</a><br>\n" +
+                                '<b>GitHub URL:</b> <a href="' + data[i].svn_url + '">' + data[i].svn_url + '</a><hr></div>\n';
+                        } else {
+                            din = data[i].name;
+                            span.innerHTML +=
+                                '<div class="center"><h2 id="' + din.replace(/\./g, '-') + '"><b>' +
+                                data[i].name + "</b></h2>" +
+                                "<b>Description:</b> <i>No description provided.</i><br>\n" +
+                                '<b>Homepage:</b> <a href="https://' + currsite + '.gq/' + data[i].name + '">https://' + currsite + '.gq/' + data[i].name + "</a><br>\n" +
+                                '<b>GitHub URL:</b> <a href="' + data[i].svn_url + '">' + data[i].svn_url + '</a><hr></div>\n';
+                        }
+                    }
+                }
+            }
+            xhr.send();
+        }
+    </script>     
+  </body>
+</html>
