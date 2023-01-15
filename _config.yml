@@ -1,0 +1,65 @@
+layout: sidebar
+style: dark
+
+plugins:
+  - jekyll-octicons
+  - jekyll-github-metadata
+  - jemoji
+
+permalink: /:year/:month/:day/:title/
+
+#github:
+#  owner: wackyblackie
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+
+projects:
+  sort_by: pushed
+  # sort_by options:
+  #   - pushed
+  #   - stars
+  limit: 9
+  exclude:
+    archived: false
+    forks: true
+    projects:
+    # - repo-name
+
+social_media:
+  # behance: your_username
+  # dribbble: your_username
+  # facebook: your_username
+  # hackerrank: your_username
+  instagram: alanburr25
+  # keybase: your_username
+  # linkedin: your_username
+  mastodon: wackyblackie
+  # medium: your_username
+  stackoverflow: 14987157
+  # telegram: your_username
+  twitter: AlanBurr12
+  # unsplash: your_username
+  # vk: your_username
+  website: https://alanburr.us.eu.org
+  youtube: "@AlanBurr25"
+  devto: alanmburr
+  gitlab: alanmburr
+
+topics:
+  - name: JavaScript
+    web_url: https://github.com/topics/javascript
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/javascript/javascript.png
+
+  - name: PHP
+    web_url: https://github.com/topics/php
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/php/php.png
+
+  - name: Python
+    web_url: https://github.com/topics/python
+    image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/python/python.png

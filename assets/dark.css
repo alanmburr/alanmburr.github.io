@@ -1,0 +1,20 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #343434;
+        color: #dedede;
+    }
+    p, *, :not(a), a > *, b, em {
+        color: #dedede;
+
+    }
+    a {
+        color: #74acf4;
+    }
+    hr, vr {
+        color: #dddddd;
+        background-color: #dddddd;
+    }
+    button {
+        background-color: #454545;
+    }
+}
