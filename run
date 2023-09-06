@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-PAGES_REPO_NWO=wackyblackie bundle exec jekyll build
+PAGES_REPO_NWO=alanmburr bundle exec jekyll build
