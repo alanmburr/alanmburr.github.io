@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
-PAGES_REPO_NWO=alanmburr bundle exec jekyll build
+set -a
+source .env
+set +a
+PAGES_REPO_NWO=alanmburr bundle exec jekyll build --incremental
