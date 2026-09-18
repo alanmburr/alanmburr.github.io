@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+iso2utf() {
+	local file
+	file=$1
+
+	iconv -f ISO-8859-1 -t UTF-8 "$file" | sponge "$file"
+}
+
+find . -type f \( -iname '*.htm' -o -iname '*.html' \) -print0 |
+while IFS= read -r -d '' source; do
+	echo -n "Covnerting $source... "
+	iso2utf "$source"
+	echo "done!"
+done
