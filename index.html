@@ -1,41 +1,55 @@
 <html>
 
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="GENERATOR" content="Microsoft FrontPage 3.0">
 <title>Home Page</title>
 
 
 <meta name="Microsoft Theme" content="nature 111"><meta name="Microsoft Border" content="tl, default"></head>
 
-<body background="_themes/nature/nabkgnd.jpg" bgcolor="#FFFF99" text="#333399" link="#990033" vlink="#009966" alink="#FF6600"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+<body background="_themes/nature/nabkgnd.jpg" bgcolor="#FFFF99" text="#333399" link="#990033" vlink="#009966" alink="#FF6600"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
 
 <p align="center"><font size="6"><strong><img src="_derived/index.html_cmp_nature110_bnr.gif" width="600" height="60" border="0" alt="Home Page"></strong></font></p>
 
-<p align="center"><font face="Trebuchet MS"><a href="index.html"><em>Alan Burr</em><span style="font-size:12.0pt;line-height:200%;
-font-family:&quot;Times New Roman&quot;,serif;mso-fareast-font-family:Aptos;mso-fareast-theme-font:
-minor-latin;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
-AR-SA">&#146;</span><script language="JavaScript"><!--
-document.head.insertAdjacentHTML('beforeend', '<script src="https://cdn.jsdelivr.net/npm/smartquotes@2.3.2/dist/smartquotes.js"></script></SCRIPT><em>s Web site</a><script language="JavaScript"><!--
+<p align="center"><em><font face="Trebuchet MS"><a href="index.html">Alan Burr's Web
+site</a><script language="JavaScript"><!--
 (function(a,b){'object'==typeof exports&&'object'==typeof module?module.exports=b():'function'==typeof define&&define.amd?define([],b):'object'==typeof exports?exports.smartquotes=b():a.smartquotes=b()})(this,function(){return function(a){function b(d){if(c[d])return c[d].exports;var e=c[d]={i:d,l:!1,exports:{}};return a[d].call(e.exports,e,e.exports,b),e.l=!0,e.exports}var c={};return b.m=a,b.c=c,b.d=function(a,c,d){b.o(a,c)||Object.defineProperty(a,c,{configurable:!1,enumerable:!0,get:d})},b.n=function(a){var c=a&&a.__esModule?function(){return a['default']}:function(){return a};return b.d(c,'a',c),c},b.o=function(a,b){return Object.prototype.hasOwnProperty.call(a,b)},b.p='',b(b.s=3)}([function(a,b,c){'use strict';var d=c(1);a.exports=function(a,b){return b=b||{},d.forEach(function(c){var d='function'==typeof c[1]?c[1](b.retainLength):c[1];a=a.replace(c[0],d)}),a}},function(a){'use strict';a.exports=[[/'''/g,function(a){return'\u2034'+(a?'\u2063\u2063':'')}],[/(\W|^)"(\w)/g,'$1\u201C$2'],[/(\u201c[^"]*)"([^"]*$|[^\u201c"]*\u201c)/g,'$1\u201D$2'],[/([^0-9])"/g,'$1\u201D'],[/''/g,function(a){return'\u2033'+(a?'\u2063':'')}],[/(\W|^)'(\S)/g,'$1\u2018$2'],[/([a-z0-9])'([a-z])/ig,'$1\u2019$2'],[/(\u2018)([0-9]{2}[^\u2019]*)(\u2018([^0-9]|$)|$|\u2019[a-z])/ig,'\u2019$2$3'],[/((\u2018[^']*)|[a-z])'([^0-9]|$)/ig,'$1\u2019$3'],[/(\B|^)\u2018(?=([^\u2018\u2019]*\u2019\b)*([^\u2018\u2019]*\B\W[\u2018\u2019]\b|[^\u2018\u2019]*$))/ig,'$1\u2019'],[/"/g,'\u2033'],[/'/g,'\u2032']]},function(a,b,c){'use strict';function d(a){if(-1===['CODE','PRE','SCRIPT','STYLE','NOSCRIPT'].indexOf(a.nodeName.toUpperCase())){var b,c,h,i='',j=a.childNodes,k=[];for(b=0;b<j.length;b++)c=j[b],c.nodeType===g||'#text'===c.nodeName?(k.push([c,i.length]),i+=c.nodeValue||c.value):c.childNodes&&c.childNodes.length&&(i+=d(c));for(b in i=f(i,{retainLength:!0}),k)h=k[b],h[0].nodeValue?h[0].nodeValue=e(i,h[0].nodeValue,h[1]):h[0].value&&(h[0].value=e(i,h[0].value,h[1]));return i}}function e(a,b,c){return a.substr(c,b.length).replace('\u2063','')}var f=c(0),g='undefined'!=typeof Element&&Element.TEXT_NODE||3;a.exports=function(a){return d(a),a}},function(a,b,c){'use strict';function d(a){return'undefined'!=typeof document&&'undefined'==typeof a?(g.runOnReady(function(){return f(document.body)}),d):'string'==typeof a?h(a):f(a)}var e=c(1),f=c(2),g=c(4),h=c(0);a.exports=d,a.exports.string=h,a.exports.element=f,a.exports.replacements=e,a.exports.listen=g},function(a,b,c){'use strict';function d(a){var b=new MutationObserver(function(a){a.forEach(function(a){var b,c=!0,d=!1;try{for(var f,g,h=a.addedNodes[Symbol.iterator]();!(c=(f=h.next()).done);c=!0)g=f.value,e(g)}catch(a){d=!0,b=a}finally{try{!c&&h.return&&h.return()}finally{if(d)throw b}}})});return d.runOnReady(function(){b.observe(a||document.body,{childList:!0,subtree:!0})}),b}var e=c(2),f=c(0);d.runOnReady=function(a){if('loading'!==document.readyState)a();else if(document.addEventListener)document.addEventListener('DOMContentLoaded',a,!1);else var b=setInterval(function(){'loading'!==document.readyState&&(clearInterval(b),a())},10)},a.exports=d}])});
 
 smartquotes(); smartquotes().listen();
-// --></script></em></font></p>
+// --></script></font></em></p>
 
 <p align="center"><br>
 <font face="Times New Roman"><small><small>All content Copyright © Alan M. Burr. All
-Rights Reserved unless otherwise noted. </small></small><br>
-<small><small>Site last updated Thursday, 17 September 2026 10:20:48 PM Eastern.</small></small></font></p>
+Rights Reserved unless otherwise noted. </small></small><script language="JavaScript"><!--
+if (window.MSInputMethodContext || document.documentMode) {
+    var elements = document.getElementsByTagName('img');
+    for (var i = 0; i < elements.length; i++) {
+        var srcset = elements[i].getAttribute('srcset');
+        if (!srcset) continue;
+        var sources = srcset.split(',');
+        for (var j = 0; j < sources.length; j++) {
+            var url = sources[j].split(' ')[0].replace(/^\s+/g, "").replace(/s+$/g, "");
+            if (url.length > 0) {
+                console.log('"' + url + '"');
+                elements[i].setAttribute('src', url);
+            }
+        }
+    }
+}
+// --></script><br>
+<small><small>Site last updated Saturday, 19 September 2026 11:49:42 PM Eastern.</small></small></font></p>
 
 <p align="center">&nbsp;</p>
-<!--mstheme--></font></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%"><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
 
 <p><font face="Trebuchet MS"></font>
 </p>
-<!--mstheme--></font></td><td valign="top" width="24"></td><!--msnavigation--><td valign="top"><!--mstheme--><font face="trebuchet ms, arial, helvetica">
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
 
 <p align="left"><font size="4" face="Trebuchet MS">Welcome to my Web site!</font></p>
 
-<p><font face="Trebuchet MS">Explore my web site by using the links below or learn more
+<p><font face="Trebuchet MS">Explore my Web site by using the links below or learn more 
 about me by reading below <img src="https://github.com/bernzrdo/msn-emoticons/raw/main/original/smile.png" alt="Smile :)" style="max-width: 100%;" width="16" height="16" align="top"></font></p>
 
 <p><font face="Trebuchet MS"><!--webbot bot="Navigation" S-Type="children" S-Orientation="horizontal" S-Rendering="graphics" B-Include-Home B-Include-Up startspan --><script language="JavaScript"><!--
@@ -58,20 +72,40 @@ if(MSFPhover) { MSFPnav3n=MSFPpreload('_derived/favorite.htm_cmp_nature110_hbtn.
 
 <h3><!--mstheme--><font color="#996600"><font face="Trebuchet MS">About Me</font><!--mstheme--></font></h3>
 
-<p><font face="Trebuchet MS">Currently, I<span style="font-size:12.0pt;line-height:200%;
-font-family:&quot;Times New Roman&quot;,serif;mso-fareast-font-family:Aptos;mso-fareast-theme-font:
-minor-latin;mso-ansi-language:EN-US;mso-fareast-language:EN-US;mso-bidi-language:
-AR-SA">&#146;</span>m
-a student at Virginia Tech (Blacksburg, VA) in the General Engineering program with the
-intent to complete a BS in Electrical Engineering.</font></p>
+<p><font face="Trebuchet MS">Currently, I'm a student at Virginia Tech (Blacksburg, VA) in 
+the General Engineering program with the intent to complete a BS in Electrical 
+Engineering.</font></p>
 
-<p><font face="Trebuchet MS">To see some of my projects, you can <a href="interest.htm">navigate
+<p><font face="Trebuchet MS">To see some of my projects, you can <a href="interest.htm">navigate 
 to the Interests &amp; Projects page</a> or <a href="https://github.com/alanmburr" target="_blank">visit my GitHub page at https://github.com/alanmburr</a>.</font></p>
 
-<p><font face="Trebuchet MS">I have also constructed a <a href="photo.htm">photo album</a>!</font></p>
+<p><font face="Trebuchet MS">I have also constructed some <a href="photo.htm">photo albums</a>!</font></p>
 
-<p>This page was last updated on <!--webbot bot="Timestamp" s-type="EDITED" s-format="%A, %d %B %Y" startspan -->Thursday, 17 September 2026<!--webbot bot="Timestamp" endspan i-checksum="3198" -->.</p>
+<h3><!--mstheme--><font color="#996600"><font face="Trebuchet MS">About the Web Site Theme and Editor</font><!--mstheme--></font></h3>
+
+<p><font face="Trebuchet MS">I decided to use Microsoft FrontPage '98 to design this Web 
+site, as I have decided that I appreciate the late '90s Web site aesthetic. This theme is 
+called &quot;Nature&quot;, and I chose it because it reminds me of autumn. Perhaps I'll 
+change it once the seasons change (winter, spring, summer), but there are only a select 
+few other themes that I like as much as this one.</font></p>
+
+<p><font face="Trebuchet MS">I chose to use a WYSIWYG editor because I didn't feel like 
+sitting around to custom-design the site, and I know if I did that it would look the same 
+as every other site (Bootstrap -- count your days), so I decided to use this program. 
+However, I have three gripes:</font></p>
+
+<!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">The default encoding is ISO-8859-1 (Windows) which doesn't mix 
+    well with Web servers that serve UTF-8. I had to go through each file individually to fix 
+    the encoding.</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">The script editor is garbage. Once I insert a script, there's 
+    no going back to edit it (at least in the header).</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">I can't figure out how to edit the theme's layout to add a 
+    footer on every page; that's why the copyright and modified date are in the header.</font><!--msthemelist--></td></tr>
+<!--msthemelist--></table>
+
+<p><font face="Trebuchet MS">This page was last updated on <!--webbot bot="Timestamp" s-type="EDITED" s-format="%A, %d %B %Y" startspan -->Saturday, 19 September 2026<!--webbot bot="Timestamp" endspan i-checksum="3203" -->.</font></p>
 
 <p align="right"><a href="http://www.microsoft.com/frontpage/"><img src="images/frontpag.gif" border="0" WIDTH="88" HEIGHT="31"></a> 
-<!--mstheme--></font><!--msnavigation--></td></tr><!--msnavigation--></table></body>
+<!--msnavigation--></td></tr><!--msnavigation--></table></body>
 </html>
