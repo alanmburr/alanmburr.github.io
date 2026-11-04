@@ -1,0 +1,14 @@
+body > table:nth-child(1) > tbody > tr > td > p:nth-child(3) {
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+UL LI { margin-bottom: 4px }
+
+.thumbnail {
+    width: 400px;
+    height: 300px;
+    object-fit: contain;
+}
