@@ -1,15 +1,84 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
 
-iso2utf() {
-	local file
-	file=$1
+import re
+import shutil
+import subprocess
 
-	iconv -f ISO-8859-1 -t UTF-8 "$file" | sponge "$file"
-}
 
-find . -type f \( -iname '*.htm' -o -iname '*.html' \) -print0 |
-while IFS= read -r -d '' source; do
-	echo -n "Covnerting $source... "
-	iso2utf "$source"
-	echo "done!"
-done
+def find_files():
+    proc = subprocess.run(
+        [
+            "find", ".",
+            "-type", "f",
+            "(",
+            "-iname", "*.htm",
+            "-o",
+            "-iname", "*.html",
+            ")",
+            "-print"
+        ],
+        check=True,
+        stdout=subprocess.PIPE
+    )
+    return proc.stdout.decode('utf-8').splitlines()
+
+
+def is_utf8(file):
+    proc = subprocess.run(["file", file], check=True, stdout=subprocess.PIPE)
+    return 'UTF-8' in str(proc.stdout)
+
+
+def fix_contents(contents):
+    contents = re.sub(r"(\xc3\x83\xc2\x82\xc3\x82\xc2)+", "", contents)
+    contents = re.sub(r"\xa9", "&copy;", contents)
+    return contents
+
+
+def fix_file(file):
+    contents = ""
+
+    with open(file, "r", encoding="utf-8" if is_utf8(file) else "iso-8859-1") as f:
+        contents = f.read()
+    # else:
+    #     print(f"Skipped {file} (already utf-8)")
+
+    contents = fix_contents(contents)
+
+    with open(file, "w", encoding="utf-8") as f:
+        f.write("\ufeff" + contents)
+
+    print(f"Fixed {file}")
+
+
+def find_vti_dirs():
+    proc = subprocess.run(
+        [
+            "find", ".",
+            "-type", "d",
+            "-iname", "_vti*",
+            "-print"
+        ],
+        check=True,
+        stdout=subprocess.PIPE
+    )
+    return proc.stdout.decode('utf-8').splitlines()
+
+
+def main():
+    try:
+        shutil.rmtree("_site")
+    except:
+        pass
+
+    for file in find_files():
+        fix_file(file)
+
+    for vti in find_vti_dirs():
+        shutil.rmtree(vti)
+        print(f"Removed vti directory {vti}")
+
+
+if __name__ == "__main__":
+    main()
+
+# vim: set tabstop=4 shiftwidth=4 softtabstop=4 expandtab:

@@ -1,1 +1,4 @@
 include: [_derived, _themes]
+exclude:
+  - run
+  - fix-encoding
