@@ -1,0 +1,143 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+
+
+<title>Lesson 10.2 -- YAGSL Schemas</title>
+<meta name="Microsoft Theme" content="nature 111, default"><meta name="Microsoft Border" content="tlb, default"></head>
+
+<body background="../_themes/nature/nabkgnd.jpg" bgcolor="#FFFF99" text="#333399" link="#990033" vlink="#009966" alink="#FF6600"><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p align="center"><font size="6"><strong><img src="_derived/lsn10-2.htm_cmp_nature110_bnr.gif" width="600" height="60" border="0" alt="Lesson 10.2"></strong></font></p>
+
+<p align="center"><em><font face="Trebuchet MS"><a href="../index.html">Alan Burr's Web
+site</a></font></em></p>
+
+<p align="center"><script language="JavaScript"><!--
+MSFPhover = 
+  (((navigator.appName == "Netscape") && 
+  (parseInt(navigator.appVersion) >= 3 )) || 
+  ((navigator.appName == "Microsoft Internet Explorer") && 
+  (parseInt(navigator.appVersion) >= 4 ))); 
+function MSFPpreload(img) 
+{
+  var a=new Image(); a.src=img; return a; 
+}
+// --></script><script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav1n=MSFPpreload('_derived/lsn00.htm_cmp_nature110_hbtn.gif'); MSFPnav1h=MSFPpreload('_derived/lsn00.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn00.htm" onmouseover="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1h.src" onmouseout="if(MSFPhover) document['MSFPnav1'].src=MSFPnav1n.src"><img src="_derived/lsn00.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 0" align="middle" name="MSFPnav1"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav2n=MSFPpreload('_derived/lsn00-1.htm_cmp_nature110_hbtn.gif'); MSFPnav2h=MSFPpreload('_derived/lsn00-1.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn00-1.htm" onmouseover="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2h.src" onmouseout="if(MSFPhover) document['MSFPnav2'].src=MSFPnav2n.src"><img src="_derived/lsn00-1.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 0.1" align="middle" name="MSFPnav2"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav3n=MSFPpreload('_derived/lsn01.htm_cmp_nature110_hbtn.gif'); MSFPnav3h=MSFPpreload('_derived/lsn01.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn01.htm" onmouseover="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3h.src" onmouseout="if(MSFPhover) document['MSFPnav3'].src=MSFPnav3n.src"><img src="_derived/lsn01.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 1" align="middle" name="MSFPnav3"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav4n=MSFPpreload('_derived/lsn02.htm_cmp_nature110_hbtn.gif'); MSFPnav4h=MSFPpreload('_derived/lsn02.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn02.htm" onmouseover="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4h.src" onmouseout="if(MSFPhover) document['MSFPnav4'].src=MSFPnav4n.src"><img src="_derived/lsn02.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 2" align="middle" name="MSFPnav4"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav5n=MSFPpreload('_derived/lsn03.htm_cmp_nature110_hbtn.gif'); MSFPnav5h=MSFPpreload('_derived/lsn03.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn03.htm" onmouseover="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5h.src" onmouseout="if(MSFPhover) document['MSFPnav5'].src=MSFPnav5n.src"><img src="_derived/lsn03.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 3" align="middle" name="MSFPnav5"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav6n=MSFPpreload('_derived/lsn04.htm_cmp_nature110_hbtn.gif'); MSFPnav6h=MSFPpreload('_derived/lsn04.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn04.htm" onmouseover="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6h.src" onmouseout="if(MSFPhover) document['MSFPnav6'].src=MSFPnav6n.src"><img src="_derived/lsn04.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 4" align="middle" name="MSFPnav6"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav7n=MSFPpreload('_derived/lsn05.htm_cmp_nature110_hbtn.gif'); MSFPnav7h=MSFPpreload('_derived/lsn05.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn05.htm" onmouseover="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7h.src" onmouseout="if(MSFPhover) document['MSFPnav7'].src=MSFPnav7n.src"><img src="_derived/lsn05.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 5" align="middle" name="MSFPnav7"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav8n=MSFPpreload('_derived/lsn06.htm_cmp_nature110_hbtn.gif'); MSFPnav8h=MSFPpreload('_derived/lsn06.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn06.htm" onmouseover="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8h.src" onmouseout="if(MSFPhover) document['MSFPnav8'].src=MSFPnav8n.src"><img src="_derived/lsn06.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 6" align="middle" name="MSFPnav8"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav9n=MSFPpreload('_derived/lsn07.htm_cmp_nature110_hbtn.gif'); MSFPnav9h=MSFPpreload('_derived/lsn07.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn07.htm" onmouseover="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9h.src" onmouseout="if(MSFPhover) document['MSFPnav9'].src=MSFPnav9n.src"><img src="_derived/lsn07.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 7" align="middle" name="MSFPnav9"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav10n=MSFPpreload('_derived/lsn08.htm_cmp_nature110_hbtn.gif'); MSFPnav10h=MSFPpreload('_derived/lsn08.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn08.htm" onmouseover="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10h.src" onmouseout="if(MSFPhover) document['MSFPnav10'].src=MSFPnav10n.src"><img src="_derived/lsn08.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 8" align="middle" name="MSFPnav10"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav11n=MSFPpreload('_derived/lsn09.htm_cmp_nature110_hbtn.gif'); MSFPnav11h=MSFPpreload('_derived/lsn09.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn09.htm" onmouseover="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11h.src" onmouseout="if(MSFPhover) document['MSFPnav11'].src=MSFPnav11n.src"><img src="_derived/lsn09.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 9" align="middle" name="MSFPnav11"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav12n=MSFPpreload('_derived/lsn10.htm_cmp_nature110_hbtn.gif'); MSFPnav12h=MSFPpreload('_derived/lsn10.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn10.htm" onmouseover="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12h.src" onmouseout="if(MSFPhover) document['MSFPnav12'].src=MSFPnav12n.src"><img src="_derived/lsn10.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 10" align="middle" name="MSFPnav12"></a> <script language="JavaScript"><!--
+if(MSFPhover) { MSFPnav13n=MSFPpreload('_derived/lsn10-1.htm_cmp_nature110_hbtn.gif'); MSFPnav13h=MSFPpreload('_derived/lsn10-1.htm_cmp_nature110_hbtn_a.gif'); }
+// --></script><a href="lsn10-1.htm" onmouseover="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13h.src" onmouseout="if(MSFPhover) document['MSFPnav13'].src=MSFPnav13n.src"><img src="_derived/lsn10-1.htm_cmp_nature110_hbtn.gif" width="140" height="60" border="0" alt="Lesson 10.1" align="middle" name="MSFPnav13"></a> <img src="_derived/lsn10-2.htm_cmp_nature110_hbtn_p.gif" width="140" height="60" border="0" alt="Lesson 10.2" align="middle"></p>
+
+<!--msthemeseparator--><p align="center"><img src="../_themes/nature/anarule.gif" width="300" height="10"></p>
+
+<p>&nbsp;</p>
+</td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td valign="top" width="1%">
+
+<p><font face="Trebuchet MS"><nobr><a href="lsn00.htm">Lesson&nbsp;0</a></nobr><br><nobr><a href="lsn00-1.htm">Lesson&nbsp;0.1</a></nobr><br><nobr><a href="lsn01.htm">Lesson&nbsp;1</a></nobr><br><nobr><a href="lsn02.htm">Lesson&nbsp;2</a></nobr><br><nobr><a href="lsn03.htm">Lesson&nbsp;3</a></nobr><br><nobr><a href="lsn04.htm">Lesson&nbsp;4</a></nobr><br><nobr><a href="lsn05.htm">Lesson&nbsp;5</a></nobr><br><nobr><a href="lsn06.htm">Lesson&nbsp;6</a></nobr><br><nobr><a href="lsn07.htm">Lesson&nbsp;7</a></nobr><br><nobr><a href="lsn08.htm">Lesson&nbsp;8</a></nobr><br><nobr><a href="lsn09.htm">Lesson&nbsp;9</a></nobr><br><nobr><a href="lsn10.htm">Lesson&nbsp;10</a></nobr><br><nobr><a href="lsn10-1.htm">Lesson&nbsp;10.1</a></nobr><br><nobr>Lesson&nbsp;10.2</nobr></font>
+</p>
+</td><td valign="top" width="24"></td><!--msnavigation--><td valign="top">
+
+<p><font face="Trebuchet MS"><a href="index.html">(See full catalog)</a></font></p>
+
+<h1><font face="Trebuchet MS">Lesson 10.2 -- <span title="Yet Another Generic Swerve Library" style="text-decoration-line: underline; text-decoration-style: dotted; cursor: help;">YAGSL</span> 
+Schemas</font></h1>
+
+<p><font face="Trebuchet MS"><a href="https://www.youtube.com/watch?v=_6_EWngPn8c">Watch 
+on YouTube</a> (recommended):</font></p>
+
+<p><font face="Trebuchet MS"><!--webbot bot="HTMLMarkup" StartSpan --><IFRAME width="560" height="315" src="https://www.youtube-nocookie.com/embed/_6_EWngPn8c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen><!--webbot BOT="HTMLMarkup" endspan --><!--webbot bot="HTMLMarkup" StartSpan --></IFRAME><!--webbot BOT="HTMLMarkup" endspan --></font></p>
+
+<p><font face="Trebuchet MS">Or if you cannot access the YouTube video, <a href="https://imgsrv.alanburr.us.eu.org/RobotCode2026Explainers/viewer?v=10-2">watch on my 
+Web site</a> or <a href="https://imgsrv.alanburr.us.eu.org/RobotCode2026Explainers/viewer?v=10-2&amp;vlc=true">open 
+in VLC on mobile</a>.</font></p>
+
+<h2><!--mstheme--><font color="#009900"><font face="Trebuchet MS">Lesson Details</font><!--mstheme--></font></h2>
+
+<p><font face="Trebuchet MS">Duration: 00:06:14 (6 minutes and 14 seconds)</font></p>
+
+<p><font face="Trebuchet MS">Topics:</font></p>
+
+<!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS"><span title="Yet Another Generic Swerve Library" style="text-decoration-line: underline; text-decoration-style: dotted; cursor: help;">YAGSL</span>: 
+    Yet Another Generic Swerve Library</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS"><span title="JavaScript Object Notation" style="text-decoration-line: underline; text-decoration-style: dotted; cursor: help;">JSON 
+    (JavaScript Object Notation)</span> Schema</font><!--msthemelist--></td></tr>
+<!--msthemelist--></table>
+
+<p><font face="Trebuchet MS">Description:</font></p>
+
+<!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS"><span title="Yet Another Generic Swerve Library" style="text-decoration-line: underline; text-decoration-style: dotted; cursor: help;">YAGSL</span> 
+    schemas: <a href="https://github.com/alanmburr/YAGSL_Schemas">https://github.com/alanmburr/YAGSL_Schemas</a></font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS"><span title="JavaScript Object Notation" style="text-decoration-line: underline; text-decoration-style: dotted; cursor: help;">JSON</span> 
+    schema: <a href="https://www.geeksforgeeks.org/javascript/json-schema/">https://www.geeksforgeeks.org/javascript/json-schema/</a></font><!--msthemelist--></td></tr>
+<!--msthemelist--></table>
+
+<p><font face="Trebuchet MS">Timestamps:</font></p>
+
+<!--msthemelist--><table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">00:00 Introduction</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">00:40 Readme</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">02:54 module</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">04:04 physicalproperties</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">05:00 pidfproperties</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">05:12 controllerproperties</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">05:28 swervedrive</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">05:42 More about schemas</font><!--msthemelist--></td></tr>
+  <!--msthemelist--><tr><td valign="baseline" width="42"><img src="../_themes/nature/anabull1.gif" width="20" height="20" hspace="11"></td><td valign="top" width="100%"><font face="Trebuchet MS">06:02 Outro</font><!--msthemelist--></td></tr>
+<!--msthemelist--></table>
+<font face="Trebuchet MS">
+
+<p>&nbsp;</font> </p>
+
+<p>All videos found in this course produced by me (Alan Burr) are made available under the 
+<a href="https://www.youtube.com/t/creative_commons">Creative Commons Attribution license 
+(CC BY) as specified by YouTube</a>. 
+<!--msnavigation--></td></tr><!--msnavigation--></table><!--msnavigation--><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td>
+
+<p style="margin-top: 0px; margin-bottom: 0px"><small><small>&nbsp;</small></small></p>
+
+<p><script language="JavaScript"><!--
+function insertCustomScript() {
+	var s = document.createElement("script");
+	s.src = "/script.js";
+	document.body.appendChild(s);
+}
+insertCustomScript();
+// --></script></p>
+
+<!--msthemeseparator--><p align="center"><img src="../_themes/nature/anarule.gif" width="300" height="10"></p>
+
+<p align="center"><font face="Times New Roman"><small><small>All content Copyright &copy; Alan 
+M. Burr. All Rights Reserved unless otherwise noted. </small></small><br>
+<small><small>Site last updated Monday, 09 November 2026 07:52:49 PM Eastern.</small></small><br>
+<small><small>To report a problem with the site, contact <a href="mailto:info@alanburr.us.eu.org">info@alanburr.us.eu.org</a>.</small></small></font></p>
+
+<p align="right">&nbsp;<a href="http://www.microsoft.com/frontpage/"><img src="../images/frontpag.gif" border="0" WIDTH="88" HEIGHT="31"></a></p>
+</td></tr><!--msnavigation--></table></body>
+</html>
